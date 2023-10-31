@@ -4,15 +4,19 @@ import junit.framework.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 
+//RegisterPage is child of Utils class
 public class RegisterPage extends Utils
 {
 
+//    create method to verify user is on register page
     public void verifyUserIsOnRegisterPage()
     {
         Assert.assertTrue(driver.getCurrentUrl().contains("register"));
     }
+//    create method to enter registration detail
     public void enterRegistrationDetails()
     {
+//        reusable method use to find locator by name
         waitForClickable(By.name("register-button"), 10);/*wait for clickable method called*/
 
         /*locator - by id to find gender section and choose one option*/
@@ -27,7 +31,6 @@ public class RegisterPage extends Utils
         /*locator - by id to find email field and type user detail*/
         typeText(By.id("Email"), email);
         System.out.println(email);
-
 
         /*method for selecting date of birth*/
         Select selectDay = new Select(driver.findElement(By.name("DateOfBirthDay")));

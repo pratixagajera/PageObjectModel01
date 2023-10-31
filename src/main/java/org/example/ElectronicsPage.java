@@ -3,13 +3,18 @@ package org.example;
 import junit.framework.Assert;
 import org.openqa.selenium.By;
 
+//Electronics is a child of Utils class
 public class ElectronicsPage extends Utils
 {
+
+    //    create method to verify user is on electronics page
     public void verifyUserShouldBeOnElectronicsPage()
     {
         urlToBe("https://demo.nopcommerce.com/electronics", 10);
     }
 
+
+    //    create method to verify user should refer product to friend
     public void verifyRegisteredUserShouldBeAbleToReferAProductToAFriend()
     {
         /*locator-by xpath to find electronics button and click on it*/
